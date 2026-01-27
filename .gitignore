@@ -16,10 +16,8 @@ dist-ssr
 .env.local
 .env*.local
 
-# Test files (optional)
-test-*.js
-check-*.js
-quick-*.js
+# Test scripts directory (development only)
+tests/
 
 # Editor directories and files
 .vscode/*
