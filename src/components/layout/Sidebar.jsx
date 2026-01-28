@@ -14,7 +14,7 @@ export default function Sidebar() {
   const location = useLocation()
 
   return (
-    <div className="w-64 bg-white shadow-lg min-h-screen">
+    <div className="w-64 bg-white dark:bg-gray-800 shadow-lg min-h-screen">
       <nav className="mt-8 px-4">
         <div className="space-y-2">
           {navigation.map((item) => {
@@ -25,8 +25,8 @@ export default function Sidebar() {
                 to={item.href}
                 className={`flex items-center px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
                   isActive
-                    ? 'bg-primary-100 text-primary-700'
-                    : 'text-gray-700 hover:bg-gray-100'
+                    ? 'bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300'
+                    : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
                 }`}
               >
                 <span className="text-2xl mr-3">{item.icon}</span>
