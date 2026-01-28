@@ -5,6 +5,9 @@ const navigation = [
   { name: 'Giao dịch', href: '/transactions', icon: '💸' },
   { name: 'Tài khoản', href: '/accounts', icon: '💳' },
   { name: 'Danh mục', href: '/categories', icon: '🏷️' },
+  { name: 'Ngân sách', href: '/budgets', icon: '💰' },
+  { name: 'Mục tiêu', href: '/goals', icon: '🎯' },
+  { name: 'Báo cáo', href: '/reports', icon: '📈' },
 ]
 
 export default function Sidebar() {
