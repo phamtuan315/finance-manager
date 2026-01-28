@@ -25,7 +25,8 @@ export default function CategoryPieChart({ data, type }) {
     const x = cx + radius * Math.cos(-midAngle * RADIAN)
     const y = cy + radius * Math.sin(-midAngle * RADIAN)
 
-    if (percentage < 5) return null
+    const percentValue = parseFloat(percentage) || 0
+    if (percentValue < 5) return null
 
     return (
       <text
@@ -36,7 +37,7 @@ export default function CategoryPieChart({ data, type }) {
         dominantBaseline="central"
         className="text-xs font-semibold"
       >
-        {`${percentage.toFixed(0)}%`}
+        {`${percentValue.toFixed(0)}%`}
       </text>
     )
   }

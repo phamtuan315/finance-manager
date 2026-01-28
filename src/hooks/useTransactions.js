@@ -62,3 +62,11 @@ export const useTransactionStats = (startDate, endDate) => {
     enabled: !!startDate && !!endDate,
   })
 }
+
+export const useCategoryStats = (startDate, endDate) => {
+  return useQuery({
+    queryKey: ['stats', 'categories', startDate, endDate],
+    queryFn: () => transactionService.getCategoryStats(startDate, endDate),
+    enabled: !!startDate && !!endDate,
+  })
+}

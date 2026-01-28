@@ -2,7 +2,7 @@ import { formatCurrency } from '../../utils/formatters'
 import { Pencil, Trash2, AlertTriangle } from 'lucide-react'
 
 export default function BudgetCard({ budget, onEdit, onDelete }) {
-  const percentage = budget.percentage || 0
+  const percentage = parseFloat(budget.percentage) || 0
   const isOverBudget = budget.isOverBudget || false
   const isWarning = percentage >= 80 && percentage < 100
 

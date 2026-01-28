@@ -185,4 +185,34 @@ export const transactionService = {
 
     return { income, expense, balance: income - expense }
   },
+
+  async getCategoryStats(startDate, endDate) {
+    const { data, error } = await supabase
+      .from('transactions')
+      .select(`
+        amount,
+        type,
+        category:categories(name, color)
+      `)
+      .gte('transaction_date', startDate)
+      .lte('transaction_date', endDate)
+
+    if (error) throw error
+
+    const stats = {}
+    data.forEach(t => {
+      const categoryName = t.category?.name || 'Không phân loại'
+      if (!stats[categoryName]) {
+        stats[categoryName] = {
+          name: categoryName,
+          color: t.category?.color || '#94a3b8',
+          amount: 0,
+          type: t.type
+        }
+      }
+      stats[categoryName].amount += parseFloat(t.amount)
+    })
+
+    return Object.values(stats)
+  },
 }

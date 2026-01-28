@@ -105,15 +105,16 @@ export const budgetService = {
           ? transactions.reduce((sum, t) => sum + parseFloat(t.amount), 0)
           : 0
 
-        const remaining = parseFloat(budget.amount) - spent
-        const percentage = (spent / parseFloat(budget.amount)) * 100
+        const budgetAmount = parseFloat(budget.amount) || 0
+        const remaining = budgetAmount - spent
+        const percentage = budgetAmount > 0 ? (spent / budgetAmount) * 100 : 0
 
         return {
           ...budget,
           spent,
           remaining,
           percentage: Math.min(percentage, 100),
-          isOverBudget: spent > parseFloat(budget.amount),
+          isOverBudget: spent > budgetAmount,
         }
       })
     )
