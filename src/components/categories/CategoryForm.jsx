@@ -60,7 +60,7 @@ export default function CategoryForm({ isOpen, onClose, onSubmit, category, load
             required
             value={formData.name}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
+            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 placeholder:text-gray-500 dark:placeholder:text-gray-400"
             placeholder="Ăn uống"
           />
         </div>

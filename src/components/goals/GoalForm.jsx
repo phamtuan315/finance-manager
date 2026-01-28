@@ -42,7 +42,7 @@ export default function GoalForm({ goal, onSubmit, onCancel }) {
           value={formData.name}
           onChange={handleChange}
           required
-          className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-gray-500 dark:placeholder:text-gray-400"
           placeholder="Ví dụ: Mua xe máy, Du lịch Đà Lạt..."
         />
       </div>
@@ -59,7 +59,7 @@ export default function GoalForm({ goal, onSubmit, onCancel }) {
           required
           min="0"
           step="100000"
-          className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-gray-500 dark:placeholder:text-gray-400"
           placeholder="Nhập số tiền mục tiêu"
         />
       </div>
@@ -73,7 +73,7 @@ export default function GoalForm({ goal, onSubmit, onCancel }) {
           name="deadline"
           value={formData.deadline}
           onChange={handleChange}
-          className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-gray-500 dark:placeholder:text-gray-400"
         />
       </div>
 

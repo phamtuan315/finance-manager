@@ -66,7 +66,7 @@ export default function TransactionFilter({ filters, onFilterChange }) {
             name="startDate"
             value={localFilters.startDate}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 text-sm"
+            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 text-sm placeholder:text-gray-500 dark:placeholder:text-gray-400"
           />
         </div>
 
@@ -79,7 +79,7 @@ export default function TransactionFilter({ filters, onFilterChange }) {
             name="endDate"
             value={localFilters.endDate}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 text-sm"
+            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 text-sm placeholder:text-gray-500 dark:placeholder:text-gray-400"
           />
         </div>
 

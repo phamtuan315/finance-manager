@@ -56,7 +56,7 @@ export default function AccountForm({ isOpen, onClose, onSubmit, account, loadin
             required
             value={formData.name}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
+            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 placeholder:text-gray-500 dark:placeholder:text-gray-400"
             placeholder="Ví tiền mặt"
           />
         </div>
@@ -89,7 +89,7 @@ export default function AccountForm({ isOpen, onClose, onSubmit, account, loadin
             name="balance"
             value={formData.balance}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
+            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 placeholder:text-gray-500 dark:placeholder:text-gray-400"
             placeholder="0"
             step="1000"
           />

@@ -92,7 +92,7 @@ export default function TransactionForm({ isOpen, onClose, onSubmit, transaction
             required
             value={formData.amount}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
+            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 placeholder:text-gray-500 dark:placeholder:text-gray-400"
             placeholder="50000"
             step="1000"
             min="0"
@@ -147,7 +147,7 @@ export default function TransactionForm({ isOpen, onClose, onSubmit, transaction
             required
             value={formData.transaction_date}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
+            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 placeholder:text-gray-500 dark:placeholder:text-gray-400"
           />
         </div>
 
@@ -160,7 +160,7 @@ export default function TransactionForm({ isOpen, onClose, onSubmit, transaction
             value={formData.description}
             onChange={handleChange}
             rows={3}
-            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
+            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 placeholder:text-gray-500 dark:placeholder:text-gray-400"
             placeholder="Ghi chú về giao dịch..."
           />
         </div>
