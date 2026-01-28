@@ -32,7 +32,7 @@ export default function GoalCard({ goal, onEdit, onDelete, onAddContribution }) 
   const daysRemaining = getDaysRemaining()
 
   return (
-    <div className="bg-white rounded-lg shadow p-6 hover:shadow-md transition-shadow">
+    <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6 hover:shadow-md transition-shadow">
       <div className="flex items-start justify-between mb-4">
         <div className="flex items-center gap-3">
           <div className={`p-3 rounded-full ${isCompleted ? 'bg-green-100' : 'bg-blue-100'}`}>
@@ -59,14 +59,14 @@ export default function GoalCard({ goal, onEdit, onDelete, onAddContribution }) 
           {!isCompleted && (
             <button
               onClick={() => onEdit(goal)}
-              className="p-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded transition-colors"
+              className="p-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 hover:bg-blue-50 rounded transition-colors"
             >
               <Pencil className="w-4 h-4" />
             </button>
           )}
           <button
             onClick={() => onDelete(goal.id)}
-            className="p-2 text-gray-600 hover:text-red-600 hover:bg-red-50 rounded transition-colors"
+            className="p-2 text-gray-600 dark:text-gray-400 hover:text-red-600 hover:bg-red-50 rounded transition-colors"
           >
             <Trash2 className="w-4 h-4" />
           </button>
@@ -104,7 +104,7 @@ export default function GoalCard({ goal, onEdit, onDelete, onAddContribution }) 
       </div>
 
       <div className="mt-4">
-        <div className="flex justify-between text-xs text-gray-500 mb-1">
+        <div className="flex justify-between text-xs text-gray-500 dark:text-gray-400 mb-1">
           <span>Tiến độ</span>
           <span className="font-medium text-blue-600">
             {progress.toFixed(1)}%
@@ -135,7 +135,7 @@ export default function GoalCard({ goal, onEdit, onDelete, onAddContribution }) 
                 value={contributionAmount}
                 onChange={(e) => setContributionAmount(e.target.value)}
                 placeholder="Số tiền"
-                className="flex-1 px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                 min="0"
                 step="10000"
               />
@@ -150,7 +150,7 @@ export default function GoalCard({ goal, onEdit, onDelete, onAddContribution }) 
                   setShowContribution(false)
                   setContributionAmount('')
                 }}
-                className="px-4 py-2 bg-gray-200 text-gray-700 rounded-md text-sm hover:bg-gray-300 transition-colors"
+                className="px-4 py-2 bg-gray-200 text-gray-700 dark:text-gray-300 rounded-md text-sm hover:bg-gray-300 transition-colors"
               >
                 Hủy
               </button>

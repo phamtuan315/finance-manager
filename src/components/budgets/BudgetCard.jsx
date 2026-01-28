@@ -19,7 +19,7 @@ export default function BudgetCard({ budget, onEdit, onDelete }) {
   }
 
   return (
-    <div className="bg-white rounded-lg shadow p-6 hover:shadow-md transition-shadow">
+    <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6 hover:shadow-md transition-shadow">
       <div className="flex items-start justify-between mb-4">
         <div className="flex items-center gap-2">
           <span className="text-2xl">{budget.category?.icon}</span>
@@ -35,13 +35,13 @@ export default function BudgetCard({ budget, onEdit, onDelete }) {
         <div className="flex gap-2">
           <button
             onClick={() => onEdit(budget)}
-            className="p-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded transition-colors"
+            className="p-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 hover:bg-blue-50 rounded transition-colors"
           >
             <Pencil className="w-4 h-4" />
           </button>
           <button
             onClick={() => onDelete(budget.id)}
-            className="p-2 text-gray-600 hover:text-red-600 hover:bg-red-50 rounded transition-colors"
+            className="p-2 text-gray-600 dark:text-gray-400 hover:text-red-600 hover:bg-red-50 rounded transition-colors"
           >
             <Trash2 className="w-4 h-4" />
           </button>
@@ -84,7 +84,7 @@ export default function BudgetCard({ budget, onEdit, onDelete }) {
       </div>
 
       <div className="mt-4">
-        <div className="flex justify-between text-xs text-gray-500 mb-1">
+        <div className="flex justify-between text-xs text-gray-500 dark:text-gray-400 mb-1">
           <span>Tiến độ</span>
           <span className={`font-medium ${getTextColor()}`}>
             {percentage.toFixed(0)}%

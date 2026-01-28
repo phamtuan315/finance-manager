@@ -28,7 +28,7 @@ export default function MobileSidebar({ isOpen, onClose }) {
           <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Menu</h2>
           <button
             onClick={onClose}
-            className="p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+            className="p-2 rounded-lg text-gray-600 dark:text-gray-400 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
           >
             <X className="w-5 h-5" />
           </button>

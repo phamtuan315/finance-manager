@@ -33,7 +33,7 @@ export default function GoalForm({ goal, onSubmit, onCancel }) {
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1">
+        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
           Tên mục tiêu
         </label>
         <input
@@ -42,13 +42,13 @@ export default function GoalForm({ goal, onSubmit, onCancel }) {
           value={formData.name}
           onChange={handleChange}
           required
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           placeholder="Ví dụ: Mua xe máy, Du lịch Đà Lạt..."
         />
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1">
+        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
           Số tiền mục tiêu (VND)
         </label>
         <input
@@ -59,13 +59,13 @@ export default function GoalForm({ goal, onSubmit, onCancel }) {
           required
           min="0"
           step="100000"
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           placeholder="Nhập số tiền mục tiêu"
         />
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1">
+        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
           Thời hạn (Tùy chọn)
         </label>
         <input
@@ -73,7 +73,7 @@ export default function GoalForm({ goal, onSubmit, onCancel }) {
           name="deadline"
           value={formData.deadline}
           onChange={handleChange}
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
       </div>
 
@@ -87,7 +87,7 @@ export default function GoalForm({ goal, onSubmit, onCancel }) {
         <button
           type="button"
           onClick={onCancel}
-          className="flex-1 bg-gray-200 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-300 transition-colors"
+          className="flex-1 bg-gray-200 text-gray-700 dark:text-gray-300 py-2 px-4 rounded-md hover:bg-gray-300 transition-colors"
         >
           Hủy
         </button>

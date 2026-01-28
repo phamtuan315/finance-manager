@@ -5,7 +5,7 @@ export default function AccountCard({ account, onEdit, onDelete }) {
   const accountType = ACCOUNT_TYPE_OPTIONS.find(t => t.value === account.type)
 
   return (
-    <div className="bg-white rounded-lg shadow p-6 hover:shadow-lg transition-shadow">
+    <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6 hover:shadow-lg transition-shadow">
       <div className="flex items-start justify-between">
         <div className="flex items-center space-x-3">
           <div className="text-4xl">{accountType?.icon || '💰'}</div>

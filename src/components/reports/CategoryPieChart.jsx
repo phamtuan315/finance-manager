@@ -5,7 +5,7 @@ export default function CategoryPieChart({ data, type }) {
   const CustomTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
       return (
-        <div className="bg-white p-3 border border-gray-200 rounded shadow-lg">
+        <div className="bg-white dark:bg-gray-800 p-3 border border-gray-200 rounded shadow-lg">
           <p className="font-medium text-gray-900">{payload[0].name}</p>
           <p className="text-sm text-gray-600">
             {formatCurrency(payload[0].value)}
@@ -43,8 +43,8 @@ export default function CategoryPieChart({ data, type }) {
   }
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow">
-      <h3 className="text-lg font-semibold text-gray-900 mb-4">
+    <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+      <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
         {type === 'income' ? 'Thu nhập theo danh mục' : 'Chi tiêu theo danh mục'}
       </h3>
       {data && data.length > 0 ? (

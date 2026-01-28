@@ -121,8 +121,8 @@ export default function Reports() {
       <div className="space-y-6">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <div>
-            <h1 className="text-2xl font-bold text-gray-900">Báo cáo tài chính</h1>
-            <p className="text-gray-600 mt-1">Phân tích chi tiết thu chi của bạn</p>
+            <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Báo cáo tài chính</h1>
+            <p className="text-gray-600 dark:text-gray-400 mt-1">Phân tích chi tiết thu chi của bạn</p>
           </div>
           <div className="flex gap-3">
             <select
@@ -147,20 +147,20 @@ export default function Reports() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-white rounded-lg shadow p-6">
-            <p className="text-sm text-gray-600 mb-1">Tổng thu nhập</p>
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
+            <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">Tổng thu nhập</p>
             <p className="text-2xl font-bold text-green-600">
               {formatCurrency(totalIncome)}
             </p>
           </div>
-          <div className="bg-white rounded-lg shadow p-6">
-            <p className="text-sm text-gray-600 mb-1">Tổng chi tiêu</p>
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
+            <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">Tổng chi tiêu</p>
             <p className="text-2xl font-bold text-red-600">
               {formatCurrency(totalExpense)}
             </p>
           </div>
-          <div className="bg-white rounded-lg shadow p-6">
-            <p className="text-sm text-gray-600 mb-1">Số dư</p>
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
+            <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">Số dư</p>
             <p className={`text-2xl font-bold ${totalBalance >= 0 ? 'text-blue-600' : 'text-orange-600'}`}>
               {formatCurrency(totalBalance)}
             </p>

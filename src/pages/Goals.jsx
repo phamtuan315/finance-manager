@@ -69,8 +69,8 @@ export default function Goals() {
       <div className="space-y-6">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <div>
-            <h1 className="text-2xl font-bold text-gray-900">Mục tiêu tiết kiệm</h1>
-            <p className="text-gray-600 mt-1">Đặt và theo dõi mục tiêu tài chính của bạn</p>
+            <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Mục tiêu tiết kiệm</h1>
+            <p className="text-gray-600 dark:text-gray-400 mt-1">Đặt và theo dõi mục tiêu tài chính của bạn</p>
           </div>
           <button
             onClick={() => setIsFormOpen(true)}
@@ -83,42 +83,42 @@ export default function Goals() {
 
         {stats && (
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div className="bg-white rounded-lg shadow p-6">
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
               <div className="flex items-center gap-3 mb-2">
                 <div className="p-2 bg-blue-100 rounded-lg">
                   <Target className="w-5 h-5 text-blue-600" />
                 </div>
-                <p className="text-sm text-gray-600">Tổng mục tiêu</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">Tổng mục tiêu</p>
               </div>
-              <p className="text-2xl font-bold text-gray-900">{stats.totalGoals}</p>
+              <p className="text-2xl font-bold text-gray-900 dark:text-white">{stats.totalGoals}</p>
             </div>
 
-            <div className="bg-white rounded-lg shadow p-6">
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
               <div className="flex items-center gap-3 mb-2">
                 <div className="p-2 bg-orange-100 rounded-lg">
                   <TrendingUp className="w-5 h-5 text-orange-600" />
                 </div>
-                <p className="text-sm text-gray-600">Đang thực hiện</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">Đang thực hiện</p>
               </div>
               <p className="text-2xl font-bold text-orange-600">{stats.activeGoals}</p>
             </div>
 
-            <div className="bg-white rounded-lg shadow p-6">
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
               <div className="flex items-center gap-3 mb-2">
                 <div className="p-2 bg-green-100 rounded-lg">
                   <CheckCircle2 className="w-5 h-5 text-green-600" />
                 </div>
-                <p className="text-sm text-gray-600">Đã hoàn thành</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">Đã hoàn thành</p>
               </div>
               <p className="text-2xl font-bold text-green-600">{stats.completedGoals}</p>
             </div>
 
-            <div className="bg-white rounded-lg shadow p-6">
-              <p className="text-sm text-gray-600 mb-2">Tiến độ chung</p>
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
+              <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">Tiến độ chung</p>
               <p className="text-2xl font-bold text-blue-600 mb-2">
                 {stats.overallProgress.toFixed(1)}%
               </p>
-              <p className="text-xs text-gray-500">
+              <p className="text-xs text-gray-500 dark:text-gray-400">
                 {formatCurrency(stats.totalSaved)} / {formatCurrency(stats.totalTarget)}
               </p>
             </div>
@@ -131,7 +131,7 @@ export default function Goals() {
             className={`px-4 py-2 rounded-lg transition-colors ${
               statusFilter === null
                 ? 'bg-blue-600 text-white'
-                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                : 'bg-gray-200 text-gray-700 dark:text-gray-300 hover:bg-gray-300'
             }`}
           >
             Tất cả
@@ -141,7 +141,7 @@ export default function Goals() {
             className={`px-4 py-2 rounded-lg transition-colors ${
               statusFilter === 'active'
                 ? 'bg-blue-600 text-white'
-                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                : 'bg-gray-200 text-gray-700 dark:text-gray-300 hover:bg-gray-300'
             }`}
           >
             Đang thực hiện
@@ -151,7 +151,7 @@ export default function Goals() {
             className={`px-4 py-2 rounded-lg transition-colors ${
               statusFilter === 'completed'
                 ? 'bg-blue-600 text-white'
-                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                : 'bg-gray-200 text-gray-700 dark:text-gray-300 hover:bg-gray-300'
             }`}
           >
             Đã hoàn thành
@@ -175,10 +175,10 @@ export default function Goals() {
             ))}
           </div>
         ) : (
-          <div className="text-center py-12 bg-white rounded-lg shadow">
+          <div className="text-center py-12 bg-white dark:bg-gray-800 rounded-lg shadow">
             <p className="text-4xl mb-4">🎯</p>
-            <p className="text-gray-600 mb-2">Chưa có mục tiêu nào</p>
-            <p className="text-sm text-gray-500">Tạo mục tiêu để bắt đầu tiết kiệm</p>
+            <p className="text-gray-600 dark:text-gray-400 mb-2">Chưa có mục tiêu nào</p>
+            <p className="text-sm text-gray-500 dark:text-gray-400">Tạo mục tiêu để bắt đầu tiết kiệm</p>
           </div>
         )}
 

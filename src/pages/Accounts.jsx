@@ -58,7 +58,7 @@ export default function Accounts() {
     <Layout>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex justify-between items-center mb-6">
-          <h1 className="text-3xl font-bold text-gray-900">Tài khoản</h1>
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Tài khoản</h1>
           <button
             onClick={handleCreate}
             className="px-4 py-2 bg-primary-600 text-white rounded-md hover:bg-primary-700"
@@ -70,7 +70,7 @@ export default function Accounts() {
         {accounts && accounts.length === 0 ? (
           <div className="text-center py-12">
             <p className="text-4xl mb-4">💳</p>
-            <p className="text-gray-600 mb-4">Chưa có tài khoản nào</p>
+            <p className="text-gray-600 dark:text-gray-400 mb-4">Chưa có tài khoản nào</p>
             <button
               onClick={handleCreate}
               className="px-4 py-2 bg-primary-600 text-white rounded-md hover:bg-primary-700"

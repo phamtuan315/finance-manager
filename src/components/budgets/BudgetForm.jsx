@@ -58,7 +58,7 @@ export default function BudgetForm({ budget, onSubmit, onCancel }) {
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1">
+        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
           Danh mục chi tiêu
         </label>
         <select
@@ -66,7 +66,7 @@ export default function BudgetForm({ budget, onSubmit, onCancel }) {
           value={formData.category_id}
           onChange={handleChange}
           required
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
           <option value="">Chọn danh mục</option>
           {categories?.map(category => (
@@ -78,7 +78,7 @@ export default function BudgetForm({ budget, onSubmit, onCancel }) {
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1">
+        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
           Số tiền ngân sách (VND)
         </label>
         <input
@@ -89,13 +89,13 @@ export default function BudgetForm({ budget, onSubmit, onCancel }) {
           required
           min="0"
           step="1000"
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           placeholder="Nhập số tiền"
         />
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1">
+        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
           Chu kỳ
         </label>
         <select
@@ -103,7 +103,7 @@ export default function BudgetForm({ budget, onSubmit, onCancel }) {
           value={formData.period}
           onChange={handleChange}
           required
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
           <option value="monthly">Theo tháng</option>
           <option value="yearly">Theo năm</option>
@@ -112,7 +112,7 @@ export default function BudgetForm({ budget, onSubmit, onCancel }) {
 
       {formData.period === 'monthly' && (
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             Tháng
           </label>
           <select
@@ -120,7 +120,7 @@ export default function BudgetForm({ budget, onSubmit, onCancel }) {
             value={formData.month}
             onChange={handleChange}
             required
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             {months.map(month => (
               <option key={month.value} value={month.value}>
@@ -132,7 +132,7 @@ export default function BudgetForm({ budget, onSubmit, onCancel }) {
       )}
 
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1">
+        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
           Năm
         </label>
         <input
@@ -143,7 +143,7 @@ export default function BudgetForm({ budget, onSubmit, onCancel }) {
           required
           min="2020"
           max="2100"
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
       </div>
 
@@ -157,7 +157,7 @@ export default function BudgetForm({ budget, onSubmit, onCancel }) {
         <button
           type="button"
           onClick={onCancel}
-          className="flex-1 bg-gray-200 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-300 transition-colors"
+          className="flex-1 bg-gray-200 text-gray-700 dark:text-gray-300 py-2 px-4 rounded-md hover:bg-gray-300 transition-colors"
         >
           Hủy
         </button>

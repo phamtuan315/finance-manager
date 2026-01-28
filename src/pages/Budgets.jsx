@@ -70,8 +70,8 @@ export default function Budgets() {
       <div className="space-y-6">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <div>
-            <h1 className="text-2xl font-bold text-gray-900">Quản lý Ngân sách</h1>
-            <p className="text-gray-600 mt-1">Theo dõi và kiểm soát chi tiêu của bạn</p>
+            <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Quản lý Ngân sách</h1>
+            <p className="text-gray-600 dark:text-gray-400 mt-1">Theo dõi và kiểm soát chi tiêu của bạn</p>
           </div>
           <button
             onClick={() => setIsFormOpen(true)}
@@ -108,20 +108,20 @@ export default function Budgets() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-white rounded-lg shadow p-6">
-            <p className="text-sm text-gray-600 mb-1">Tổng ngân sách</p>
-            <p className="text-2xl font-bold text-gray-900">
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
+            <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">Tổng ngân sách</p>
+            <p className="text-2xl font-bold text-gray-900 dark:text-white">
               {totalBudget.toLocaleString('vi-VN')} ₫
             </p>
           </div>
-          <div className="bg-white rounded-lg shadow p-6">
-            <p className="text-sm text-gray-600 mb-1">Đã chi tiêu</p>
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
+            <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">Đã chi tiêu</p>
             <p className="text-2xl font-bold text-orange-600">
               {totalSpent.toLocaleString('vi-VN')} ₫
             </p>
           </div>
-          <div className="bg-white rounded-lg shadow p-6">
-            <p className="text-sm text-gray-600 mb-1">Còn lại</p>
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
+            <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">Còn lại</p>
             <p className={`text-2xl font-bold ${totalRemaining >= 0 ? 'text-green-600' : 'text-red-600'}`}>
               {totalRemaining.toLocaleString('vi-VN')} ₫
             </p>
@@ -144,10 +144,10 @@ export default function Budgets() {
             ))}
           </div>
         ) : (
-          <div className="text-center py-12 bg-white rounded-lg shadow">
+          <div className="text-center py-12 bg-white dark:bg-gray-800 rounded-lg shadow">
             <p className="text-4xl mb-4">💰</p>
-            <p className="text-gray-600 mb-2">Chưa có ngân sách nào</p>
-            <p className="text-sm text-gray-500">Tạo ngân sách để theo dõi chi tiêu của bạn</p>
+            <p className="text-gray-600 dark:text-gray-400 mb-2">Chưa có ngân sách nào</p>
+            <p className="text-sm text-gray-500 dark:text-gray-400">Tạo ngân sách để theo dõi chi tiêu của bạn</p>
           </div>
         )}
 

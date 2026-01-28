@@ -5,8 +5,8 @@ export default function IncomeExpenseChart({ data }) {
   const CustomTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
       return (
-        <div className="bg-white p-3 border border-gray-200 rounded shadow-lg">
-          <p className="font-medium text-gray-900 mb-2">{payload[0].payload.month}</p>
+        <div className="bg-white dark:bg-gray-800 p-3 border border-gray-200 rounded shadow-lg">
+          <p className="font-medium text-gray-900 dark:text-white mb-2">{payload[0].payload.month}</p>
           <p className="text-sm text-green-600">
             Thu: {formatCurrency(payload[0].value)}
           </p>
@@ -20,8 +20,8 @@ export default function IncomeExpenseChart({ data }) {
   }
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow">
-      <h3 className="text-lg font-semibold text-gray-900 mb-4">
+    <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+      <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
         Thu chi theo tháng
       </h3>
       <ResponsiveContainer width="100%" height={300}>

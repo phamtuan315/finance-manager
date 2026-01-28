@@ -7,7 +7,7 @@ export default function Layout({ children }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-700 dark:bg-gray-900">
       <Navbar onMenuClick={() => setIsMobileMenuOpen(true)} />
       <div className="flex">
         <div className="hidden md:block">

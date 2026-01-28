@@ -51,7 +51,7 @@ export default function CategoryForm({ isOpen, onClose, onSubmit, category, load
     <Modal isOpen={isOpen} onClose={onClose} title={category ? 'Sửa danh mục' : 'Thêm danh mục'}>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             Tên danh mục *
           </label>
           <input
@@ -60,13 +60,13 @@ export default function CategoryForm({ isOpen, onClose, onSubmit, category, load
             required
             value={formData.name}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
+            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
             placeholder="Ăn uống"
           />
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             Loại *
           </label>
           <select
@@ -74,7 +74,7 @@ export default function CategoryForm({ isOpen, onClose, onSubmit, category, load
             required
             value={formData.type}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
+            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
           >
             <option value="income">Thu nhập</option>
             <option value="expense">Chi tiêu</option>
@@ -82,7 +82,7 @@ export default function CategoryForm({ isOpen, onClose, onSubmit, category, load
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             Icon
           </label>
           <div className="grid grid-cols-10 gap-2">
@@ -100,7 +100,7 @@ export default function CategoryForm({ isOpen, onClose, onSubmit, category, load
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             Màu sắc
           </label>
           <div className="grid grid-cols-10 gap-2">
@@ -120,7 +120,7 @@ export default function CategoryForm({ isOpen, onClose, onSubmit, category, load
           <button
             type="button"
             onClick={onClose}
-            className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50"
+            className="px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-md hover:bg-gray-50"
           >
             Hủy
           </button>

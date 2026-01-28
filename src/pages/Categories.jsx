@@ -61,7 +61,7 @@ export default function Categories() {
     <Layout>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex justify-between items-center mb-6">
-          <h1 className="text-3xl font-bold text-gray-900">Danh mục</h1>
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Danh mục</h1>
           <button
             onClick={handleCreate}
             className="px-4 py-2 bg-primary-600 text-white rounded-md hover:bg-primary-700"
@@ -73,19 +73,19 @@ export default function Categories() {
         <div className="mb-6 flex space-x-2">
           <button
             onClick={() => setFilterType(null)}
-            className={`px-4 py-2 rounded-md ${!filterType ? 'bg-primary-600 text-white' : 'bg-white text-gray-700 border'}`}
+            className={`px-4 py-2 rounded-md ${!filterType ? 'bg-primary-600 text-white' : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border'}`}
           >
             Tất cả
           </button>
           <button
             onClick={() => setFilterType('income')}
-            className={`px-4 py-2 rounded-md ${filterType === 'income' ? 'bg-green-600 text-white' : 'bg-white text-gray-700 border'}`}
+            className={`px-4 py-2 rounded-md ${filterType === 'income' ? 'bg-green-600 text-white' : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border'}`}
           >
             Thu nhập
           </button>
           <button
             onClick={() => setFilterType('expense')}
-            className={`px-4 py-2 rounded-md ${filterType === 'expense' ? 'bg-red-600 text-white' : 'bg-white text-gray-700 border'}`}
+            className={`px-4 py-2 rounded-md ${filterType === 'expense' ? 'bg-red-600 text-white' : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border'}`}
           >
             Chi tiêu
           </button>
@@ -93,12 +93,12 @@ export default function Categories() {
 
         {!filterType || filterType === 'income' ? (
           <div className="mb-8">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">Thu nhập</h2>
+            <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Thu nhập</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {incomeCategories.map(category => (
                 <div
                   key={category.id}
-                  className="bg-white rounded-lg shadow p-4 hover:shadow-lg transition-shadow"
+                  className="bg-white dark:bg-gray-800 rounded-lg shadow p-4 hover:shadow-lg transition-shadow"
                   style={{ borderLeft: `4px solid ${category.color}` }}
                 >
                   <div className="flex items-center justify-between mb-2">
@@ -118,7 +118,7 @@ export default function Categories() {
                       </button>
                     </div>
                   </div>
-                  <p className="font-medium text-gray-900">{category.name}</p>
+                  <p className="font-medium text-gray-900 dark:text-white">{category.name}</p>
                 </div>
               ))}
             </div>
@@ -127,12 +127,12 @@ export default function Categories() {
 
         {!filterType || filterType === 'expense' ? (
           <div>
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">Chi tiêu</h2>
+            <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Chi tiêu</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {expenseCategories.map(category => (
                 <div
                   key={category.id}
-                  className="bg-white rounded-lg shadow p-4 hover:shadow-lg transition-shadow"
+                  className="bg-white dark:bg-gray-800 rounded-lg shadow p-4 hover:shadow-lg transition-shadow"
                   style={{ borderLeft: `4px solid ${category.color}` }}
                 >
                   <div className="flex items-center justify-between mb-2">
@@ -152,7 +152,7 @@ export default function Categories() {
                       </button>
                     </div>
                   </div>
-                  <p className="font-medium text-gray-900">{category.name}</p>
+                  <p className="font-medium text-gray-900 dark:text-white">{category.name}</p>
                 </div>
               ))}
             </div>

@@ -45,12 +45,12 @@ export default function TransactionFilter({ filters, onFilterChange }) {
   }
 
   return (
-    <div className="bg-white shadow rounded-lg p-4 mb-6">
+    <div className="bg-white dark:bg-gray-800 shadow rounded-lg p-4 mb-6">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-medium text-gray-900">Bộ lọc</h3>
         <button
           onClick={handleReset}
-          className="text-sm text-gray-600 hover:text-gray-900"
+          className="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900"
         >
           Đặt lại
         </button>
@@ -58,7 +58,7 @@ export default function TransactionFilter({ filters, onFilterChange }) {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             Từ ngày
           </label>
           <input
@@ -66,12 +66,12 @@ export default function TransactionFilter({ filters, onFilterChange }) {
             name="startDate"
             value={localFilters.startDate}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 text-sm"
+            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 text-sm"
           />
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             Đến ngày
           </label>
           <input
@@ -79,19 +79,19 @@ export default function TransactionFilter({ filters, onFilterChange }) {
             name="endDate"
             value={localFilters.endDate}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 text-sm"
+            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 text-sm"
           />
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             Loại
           </label>
           <select
             name="type"
             value={localFilters.type}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 text-sm"
+            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 text-sm"
           >
             <option value="">Tất cả</option>
             {TRANSACTION_TYPE_OPTIONS.map(option => (
@@ -103,7 +103,7 @@ export default function TransactionFilter({ filters, onFilterChange }) {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             Danh mục
           </label>
           <select
@@ -111,7 +111,7 @@ export default function TransactionFilter({ filters, onFilterChange }) {
             value={localFilters.categoryId}
             onChange={handleChange}
             disabled={!localFilters.type}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 text-sm disabled:bg-gray-100"
+            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 text-sm disabled:bg-gray-100"
           >
             <option value="">Tất cả</option>
             {categories?.map(category => (
@@ -123,14 +123,14 @@ export default function TransactionFilter({ filters, onFilterChange }) {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             Tài khoản
           </label>
           <select
             name="accountId"
             value={localFilters.accountId}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 text-sm"
+            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 text-sm"
           >
             <option value="">Tất cả</option>
             {accounts?.map(account => (
