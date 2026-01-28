@@ -2,12 +2,17 @@ import { useState } from 'react'
 import { useTransactions, useCreateTransaction, useUpdateTransaction, useDeleteTransaction } from '../hooks/useTransactions'
 import Layout from '../components/layout/Layout'
 import TransactionForm from '../components/transactions/TransactionForm'
+import TransactionFilter from '../components/transactions/TransactionFilter'
 import { formatCurrency, formatDate } from '../utils/formatters'
+import { getFirstDayOfMonth, getTodayDate } from '../utils/formatters'
 
 export default function Transactions() {
   const [isFormOpen, setIsFormOpen] = useState(false)
   const [editingTransaction, setEditingTransaction] = useState(null)
-  const [filters, setFilters] = useState({})
+  const [filters, setFilters] = useState({
+    startDate: getFirstDayOfMonth(),
+    endDate: getTodayDate(),
+  })
 
   const { data: transactions, isLoading } = useTransactions(filters)
   const createMutation = useCreateTransaction()
@@ -72,6 +77,8 @@ export default function Transactions() {
             + Thêm giao dịch
           </button>
         </div>
+
+        <TransactionFilter filters={filters} onFilterChange={setFilters} />
 
         {transactions && transactions.length === 0 ? (
           <div className="text-center py-12">

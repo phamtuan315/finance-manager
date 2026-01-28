@@ -61,7 +61,7 @@ export const transactionService = {
 
     // Update account balance
     if (transaction.account_id) {
-      await this.updateAccountBalance(
+      await transactionService.updateAccountBalance(
         transaction.account_id,
         transaction.amount,
         transaction.type,
@@ -74,7 +74,7 @@ export const transactionService = {
 
   async update(id, transaction) {
     // Get old transaction to revert balance
-    const oldTransaction = await this.getById(id)
+    const oldTransaction = await transactionService.getById(id)
 
     const { data, error } = await supabase
       .from('transactions')
@@ -87,7 +87,7 @@ export const transactionService = {
 
     // Revert old balance
     if (oldTransaction.account_id) {
-      await this.updateAccountBalance(
+      await transactionService.updateAccountBalance(
         oldTransaction.account_id,
         oldTransaction.amount,
         oldTransaction.type,
@@ -101,7 +101,7 @@ export const transactionService = {
     const newType = transaction.type || oldTransaction.type
 
     if (newAccountId) {
-      await this.updateAccountBalance(
+      await transactionService.updateAccountBalance(
         newAccountId,
         newAmount,
         newType,
@@ -114,7 +114,7 @@ export const transactionService = {
 
   async delete(id) {
     // Get transaction to revert balance
-    const transaction = await this.getById(id)
+    const transaction = await transactionService.getById(id)
 
     const { error } = await supabase
       .from('transactions')
@@ -125,7 +125,7 @@ export const transactionService = {
 
     // Revert balance
     if (transaction.account_id) {
-      await this.updateAccountBalance(
+      await transactionService.updateAccountBalance(
         transaction.account_id,
         transaction.amount,
         transaction.type,
